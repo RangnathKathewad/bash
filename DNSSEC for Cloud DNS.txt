@@ -1,0 +1,21 @@
+ON >> DNSSEC for Cloud DNS
+
+1.Using GCP Console
+﻿
+﻿GCP Console>>
+Network Services >>
+Cloud DNS>>
+﻿Click on zone name>>
+
+﻿Zone details>>
+﻿Edit>>
+﻿Edit a DNS zone>>
+﻿DNSSEC >>On>>
+﻿Save
+
+
+2.﻿Using CLI Command
+﻿
+﻿﻿You can enable DNSSEC for existing managed zones using the gcloud command line tool or the API:
+﻿
+gcloud dns managed-zones update EXAMPLE_ZONE --dnssec-state on

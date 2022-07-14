@@ -1,0 +1,13 @@
+gcloud organizations add-iam-policy-binding 60046326970 --member=user:igal.dahan@antidotehealth.ai --role=roles/resourcemanager.folderAdmin
+gcloud resource-manager folders create --display-name=infrastructure --organization=60046326970
+gcloud resource-manager folders create --display-name=production --organization=60046326970
+gcloud resource-manager folders create --display-name=development --organization=60046326970
+gcloud projects create adh-dns --folder=infrastructure
+gcloud projects create adh-dns --folder 1025020209615 --name="antidote health DNS"
+gcloud projects create adh-jenkins --folder 1025020209615 --name="antidote health jenkins"
+gcloud resource-manager folders list 
+gcloud resource-manager folders list --organization=60046326970
+gcloud projects create adh-production --folder 634932211711 --name="antidote health production"
+gcloud projects create adh-staging --folder 659534745485 --name="antidote health staging"
+gcloud projects create adh-development --folder 659534745485 --name="antidote health development"
+

@@ -1,0 +1,8 @@
+CLI for Enable (ON) ﻿"Block Project-wide SSH keys"
+
+﻿
+﻿gcloud compute instances create <var>VM_NAME</var> \
+    --metadata block-project-ssh-keys=TRUE
+﻿
+﻿
+﻿﻿Replace VM_NAME with the name of the new VM﻿

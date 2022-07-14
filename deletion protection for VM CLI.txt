@@ -1,0 +1,25 @@
+Deletion Protection is ENABLE or DISABLE on VM instances
+
+1	Setting deletion protection during instance creation
+
+When creating a VM instance, include either the --deletion-protection or no-deletion-protection flags. Deletion protection is disabled by default so to enable deletion protection:
+
+gcloud compute instances create [INSTANCE_NAME] --deletion-protection
+			
+			OR
+
+gcloud compute instances create [INSTANCE_NAME] --no-deletion-protection
+
+
+2	Determining if an instance has deletion protection enabled
+
+gcloud compute instances describe example-instance | grep "deletionProtection"
+
+Output:-	deletionProtection: false
+
+3	for existing instances
+
+gcloud compute instances update [INSTANCE_NAME] \
+    [--deletion-protection | --no-deletion-protection]
+
+gcloud compute instances update example-vm --deletion-protection
